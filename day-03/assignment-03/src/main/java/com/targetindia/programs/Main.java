@@ -1,5 +1,6 @@
 package com.targetindia.programs;
 
+import com.targetindia.exceptions.*;
 import com.targetindia.model.Database;
 import com.targetindia.utils.KeyboardUtil;
 
@@ -18,31 +19,40 @@ public class Main {
 
             String[] command = input.split(" ", 2);
 
-            switch(command[0]) {
+            try {
+                switch(command[0]) {
 
-                case "add":
-                    DB.processAddCustomer(command[1]);
-                    break;
+                    case "add":
+                        DB.processAddCustomer(command[1]);
+                        break;
 
-                case "view":
-                    DB.printData();
-                    break;
+                    case "view":
+                        DB.printData();
+                        break;
 
-                case "search":
-                    DB.printData(command[1]);
-                    break;
+                    case "search":
+                        DB.printData(command[1]);
+                        break;
 
-                case "delete":
-                    DB.processDeleteCustomer(Integer.parseInt(command[1]));
-                    break;
+                    case "delete":
+                        DB.processDeleteCustomer(Integer.parseInt(command[1]));
+                        break;
 
-                case "update":
-                    DB.processUpdateCustomer(command[1]);
-                    break;
+                    case "update":
+                        DB.processUpdateCustomer(command[1]);
+                        break;
 
-                default:
-                    System.out.println("Please enter a valid input or enter \"exit\" to terminate the program.");
-                    break;
+                    default:
+                        System.out.println("Please enter a valid input or enter \"exit\" to terminate the program.");
+                        break;
+                }
+            } catch (InputFormatException |
+                     InvalidIdException |
+                     InvalidNumberException |
+                     InvalidEmailException |
+                     InvalidCityException |
+                     InvalidNameException e) {
+                System.out.println(e.getMessage());
             }
 
             input = KeyboardUtil.getString("> ");
