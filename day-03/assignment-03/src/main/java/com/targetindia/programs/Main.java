@@ -3,7 +3,9 @@ package com.targetindia.programs;
 import com.targetindia.exceptions.*;
 import com.targetindia.model.Database;
 import com.targetindia.utils.KeyboardUtil;
+import lombok.extern.slf4j.Slf4j;
 
+@Slf4j
 public class Main {
     public static final String EXIT_COMMAND = "exit";
 
@@ -43,7 +45,7 @@ public class Main {
                         break;
 
                     default:
-                        System.out.println("Please enter a valid input or enter \"exit\" to terminate the program.");
+                        log.warn("Please enter a valid input or enter \"exit\" to terminate the program.");
                         break;
                 }
             } catch (InputFormatException |
@@ -52,7 +54,7 @@ public class Main {
                      InvalidEmailException |
                      InvalidCityException |
                      InvalidNameException e) {
-                System.out.println(e.getMessage());
+                log.warn(e.getMessage());
             }
 
             input = KeyboardUtil.getString("> ");
