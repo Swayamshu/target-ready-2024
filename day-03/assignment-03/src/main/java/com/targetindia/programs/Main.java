@@ -7,14 +7,19 @@ import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 public class Main {
-    public static final String EXIT_COMMAND = "exit";
+    private static final String ADD_CUSTOMER_COMMAND = "add";
+    private static final String SEARCH_CUSTOMER_COMMAND = "search";
+    private static final String DELETE_CUSTOMER_COMMAND = "delete";
+    private static final String UPDATE_CUSTOMER_COMMAND = "update";
+    private static final String VIEW_ALL_CUSTOMERS_COMMAND = "view";
+    private static final String EXIT_COMMAND = "exit";
 
     public static void main(String[] args) {
         Database DB = new Database();
         processCommands(DB);
     }
 
-    public static void processCommands(Database DB) {
+    private static void processCommands(Database DB) {
         String input = KeyboardUtil.getString("> ");
 
         while(!input.equals(EXIT_COMMAND)) {
@@ -24,23 +29,23 @@ public class Main {
             try {
                 switch(command[0]) {
 
-                    case "add":
+                    case ADD_CUSTOMER_COMMAND:
                         DB.processAddCustomer(command[1]);
                         break;
 
-                    case "view":
+                    case VIEW_ALL_CUSTOMERS_COMMAND:
                         DB.printData();
                         break;
 
-                    case "search":
+                    case SEARCH_CUSTOMER_COMMAND:
                         DB.printData(command[1]);
                         break;
 
-                    case "delete":
+                    case DELETE_CUSTOMER_COMMAND:
                         DB.processDeleteCustomer(Integer.parseInt(command[1]));
                         break;
 
-                    case "update":
+                    case UPDATE_CUSTOMER_COMMAND:
                         DB.processUpdateCustomer(command[1]);
                         break;
 
