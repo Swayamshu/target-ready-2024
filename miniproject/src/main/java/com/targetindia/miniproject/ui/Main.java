@@ -14,6 +14,7 @@ public class Main {
 
     public static void main(String[] args) {
         log.trace("starting app...");
+        new Main().start();
         log.trace("terminating app.");
     }
 

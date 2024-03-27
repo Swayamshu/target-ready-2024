@@ -1,0 +1,83 @@
+[TRACE] 2024-03-28 00:04:56,472 com.targetindia.miniproject.ui.Main starting app...
+[TRACE] 2024-03-28 00:04:58,301 com.targetindia.miniproject.ui.Main user made a choice 1
+[TRACE] 2024-03-28 00:05:00,825 com.targetindia.miniproject.ui.Main user made a choice 3
+[ WARN] 2024-03-28 00:05:02,004 com.targetindia.miniproject.ui.CustomerActions Error while fetching customer with ID.
+com.targetindia.miniproject.service.ServiceException: com.targetindia.miniproject.dao.DaoException: com.targetindia.miniproject.dao.DaoException: Customer not found for given ID: 56
+	at com.targetindia.miniproject.service.CustomerManager.getById(CustomerManager.java:57)
+	at com.targetindia.miniproject.ui.CustomerActions.displayCustomerByID(CustomerActions.java:71)
+	at com.targetindia.miniproject.ui.Main.start(Main.java:65)
+	at com.targetindia.miniproject.ui.Main.main(Main.java:17)
+Caused by: com.targetindia.miniproject.dao.DaoException: com.targetindia.miniproject.dao.DaoException: Customer not found for given ID: 56
+	at com.targetindia.miniproject.dao.CsvFileCustomerDao.getById(CsvFileCustomerDao.java:105)
+	at com.targetindia.miniproject.service.CustomerManager.getById(CustomerManager.java:55)
+	... 3 more
+Caused by: com.targetindia.miniproject.dao.DaoException: Customer not found for given ID: 56
+	at com.targetindia.miniproject.dao.CsvFileCustomerDao.getById(CsvFileCustomerDao.java:102)
+	... 4 more
+[TRACE] 2024-03-28 00:05:45,696 com.targetindia.miniproject.ui.Main starting app...
+[TRACE] 2024-03-28 00:05:53,995 com.targetindia.miniproject.ui.Main user made a choice 1
+[TRACE] 2024-03-28 00:05:56,169 com.targetindia.miniproject.ui.Main user made a choice 3
+[ WARN] 2024-03-28 00:05:57,212 com.targetindia.miniproject.ui.CustomerActions Error while fetching customer with ID.
+com.targetindia.miniproject.service.ServiceException: com.targetindia.miniproject.dao.DaoException: com.targetindia.miniproject.dao.DaoException: Customer not found for given ID: 56
+	at com.targetindia.miniproject.service.CustomerManager.getById(CustomerManager.java:57)
+	at com.targetindia.miniproject.ui.CustomerActions.displayCustomerByID(CustomerActions.java:71)
+	at com.targetindia.miniproject.ui.Main.start(Main.java:65)
+	at com.targetindia.miniproject.ui.Main.main(Main.java:17)
+Caused by: com.targetindia.miniproject.dao.DaoException: com.targetindia.miniproject.dao.DaoException: Customer not found for given ID: 56
+	at com.targetindia.miniproject.dao.CsvFileCustomerDao.getById(CsvFileCustomerDao.java:105)
+	at com.targetindia.miniproject.service.CustomerManager.getById(CustomerManager.java:55)
+	... 3 more
+Caused by: com.targetindia.miniproject.dao.DaoException: Customer not found for given ID: 56
+	at com.targetindia.miniproject.dao.CsvFileCustomerDao.getById(CsvFileCustomerDao.java:102)
+	... 4 more
+[TRACE] 2024-03-28 00:10:37,074 com.targetindia.miniproject.ui.Main starting app...
+[TRACE] 2024-03-28 00:10:40,023 com.targetindia.miniproject.ui.Main user made a choice 1
+[TRACE] 2024-03-28 00:10:41,748 com.targetindia.miniproject.ui.Main user made a choice 3
+[ WARN] 2024-03-28 00:10:42,777 com.targetindia.miniproject.ui.CustomerActions Error while fetching customer with ID.
+com.targetindia.miniproject.service.ServiceException: com.targetindia.miniproject.dao.DaoException: com.targetindia.miniproject.dao.DaoException: Customer not found for given ID: 56
+	at com.targetindia.miniproject.service.CustomerManager.getById(CustomerManager.java:57)
+	at com.targetindia.miniproject.ui.CustomerActions.displayCustomerByID(CustomerActions.java:71)
+	at com.targetindia.miniproject.ui.Main.start(Main.java:65)
+	at com.targetindia.miniproject.ui.Main.main(Main.java:17)
+Caused by: com.targetindia.miniproject.dao.DaoException: com.targetindia.miniproject.dao.DaoException: Customer not found for given ID: 56
+	at com.targetindia.miniproject.dao.CsvFileCustomerDao.getById(CsvFileCustomerDao.java:105)
+	at com.targetindia.miniproject.service.CustomerManager.getById(CustomerManager.java:55)
+	... 3 more
+Caused by: com.targetindia.miniproject.dao.DaoException: Customer not found for given ID: 56
+	at com.targetindia.miniproject.dao.CsvFileCustomerDao.getById(CsvFileCustomerDao.java:102)
+	... 4 more
+[TRACE] 2024-03-28 00:10:48,873 com.targetindia.miniproject.ui.Main user made a choice 4
+[ WARN] 2024-03-28 00:10:52,659 com.targetindia.miniproject.ui.CustomerActions Error while fetching customer with email.
+com.targetindia.miniproject.service.ServiceException: com.targetindia.miniproject.dao.DaoException: java.util.NoSuchElementException: No value present
+	at com.targetindia.miniproject.service.CustomerManager.getByEmail(CustomerManager.java:65)
+	at com.targetindia.miniproject.ui.CustomerActions.displayCustomerByEmail(CustomerActions.java:82)
+	at com.targetindia.miniproject.ui.Main.start(Main.java:68)
+	at com.targetindia.miniproject.ui.Main.main(Main.java:17)
+Caused by: com.targetindia.miniproject.dao.DaoException: java.util.NoSuchElementException: No value present
+	at com.targetindia.miniproject.dao.CsvFileCustomerDao.getByEmail(CsvFileCustomerDao.java:155)
+	at com.targetindia.miniproject.service.CustomerManager.getByEmail(CustomerManager.java:63)
+	... 3 more
+Caused by: java.util.NoSuchElementException: No value present
+	at java.base/java.util.Optional.orElseThrow(Optional.java:377)
+	at com.targetindia.miniproject.dao.CsvFileCustomerDao.getByEmail(CsvFileCustomerDao.java:153)
+	... 4 more
+[TRACE] 2024-03-28 00:10:57,394 com.targetindia.miniproject.ui.Main user made a choice 3
+[TRACE] 2024-03-28 00:11:05,811 com.targetindia.miniproject.ui.Main user made a choice 2
+[TRACE] 2024-03-28 00:11:34,132 com.targetindia.miniproject.ui.Main user made a choice 1
+[TRACE] 2024-03-28 00:11:42,055 com.targetindia.miniproject.ui.Main user made a choice 7
+[TRACE] 2024-03-28 00:12:09,866 com.targetindia.miniproject.ui.Main user made a choice 1
+[TRACE] 2024-03-28 00:12:19,317 com.targetindia.miniproject.ui.Main user made a choice 6
+[TRACE] 2024-03-28 00:12:25,646 com.targetindia.miniproject.ui.Main user made a choice 1
+[TRACE] 2024-03-28 00:12:27,389 com.targetindia.miniproject.ui.Main terminating app.
+[TRACE] 2024-03-28 00:20:30,667 com.targetindia.miniproject.ui.Main starting app...
+[TRACE] 2024-03-28 00:20:50,902 com.targetindia.miniproject.ui.Main starting app...
+[TRACE] 2024-03-28 00:21:10,074 com.targetindia.miniproject.ui.Main user made a choice 1
+[TRACE] 2024-03-28 00:21:15,371 com.targetindia.miniproject.ui.Main user made a choice 2
+[ WARN] 2024-03-28 00:21:33,359 com.targetindia.miniproject.ui.CustomerActions Error while adding new user
+com.targetindia.miniproject.model.ModelException: Invalid email entered: huj
+	at com.targetindia.miniproject.model.Customer.<init>(Customer.java:27)
+	at com.targetindia.miniproject.ui.CustomerActions.addNewCustomer(CustomerActions.java:59)
+	at com.targetindia.miniproject.ui.Main.start(Main.java:62)
+	at com.targetindia.miniproject.ui.Main.main(Main.java:17)
+[TRACE] 2024-03-28 00:21:41,444 com.targetindia.miniproject.ui.Main user made a choice 1
+[TRACE] 2024-03-28 00:21:49,747 com.targetindia.miniproject.ui.Main terminating app.
