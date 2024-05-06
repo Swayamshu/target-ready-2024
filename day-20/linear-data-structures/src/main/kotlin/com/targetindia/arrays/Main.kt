@@ -95,7 +95,7 @@ fun insertAtIndex(array: Array<Int>, index: Int, num: Int): Array<Int> {
 }
 
 fun deleteAtIndex(array: Array<Int>, index: Int): Array<Int> {
-    if (index !in 0..array.size) {
+    if (index !in array.indices) {
         println("\n`index` must be between 0 and ${array.size}")
         return array
     }
